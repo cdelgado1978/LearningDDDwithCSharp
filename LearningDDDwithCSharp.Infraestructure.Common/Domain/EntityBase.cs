@@ -44,5 +44,18 @@ namespace LearningDDDwithCSharp.Infraestructure.Common.Domain
         }
 
         protected abstract void Validate();
+
+        protected void AddBrokenRule(BusinessRule businessRule)
+        {
+            _brokenRules.Add(businessRule);
+        }
+
+        public IEnumerable<BusinessRule> GetBrokenRules()
+        {
+            _brokenRules.Clear();
+            Validate();
+            return _brokenRules;
+        }
+
     }
 }

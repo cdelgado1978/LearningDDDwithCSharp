@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearningDDDwithCSharp.Infraestructure.Common.Domain
 {
-    class BusinessRule
+    public class BusinessRule
     {
         public BusinessRule(string ruleDescription)
         {
@@ -14,5 +14,7 @@ namespace LearningDDDwithCSharp.Infraestructure.Common.Domain
         }
 
         public string RuleDescription { get; set; }
+
+
     }
 }
